@@ -20,7 +20,8 @@
               x-init="Edrys.onUpdate((e) => { 
                             edrys = {...e} 
                             let room = encodeURIComponent(edrys.liveRoom.name).replace(/[\W_]+/g, '')
-                            url = `https://excalidraw.com/#room=edrys-${room}-${edrys.class_id}` 
+                            let key = 'x' + edrys.class_id
+                            url = `https://excalidraw.com/#room=edrys-${room}-${edrys.class_id},${key}` 
                       })">
 
         <iframe :src="url" frameborder="0" style="width:100%;height:100%;"></iframe>
